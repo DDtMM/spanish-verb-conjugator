@@ -19,6 +19,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "404.md",
+                "input": "/",
+                "output": "/"
               }
             ],
             "styles": [
@@ -86,5 +91,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0a24e5e9-0d1b-4bc0-ad6c-cca633c76a8f"
   }
 }

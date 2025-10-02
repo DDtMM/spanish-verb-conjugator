@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:github-pages": "ng build --base-href /spanish-verb-conjugator/ && npx cpy dist/spanish-verb-conjugator/browser/index.html dist/spanish-verb-conjugator/browser/ --rename 404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:spanish-verb-conjugator": "node dist/spanish-verb-conjugator/server/server.mjs"
@@ -31,6 +32,7 @@
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.3",
+    "daisyui": "^5.0.9",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -39,15 +41,19 @@
     "@angular/build": "^20.3.3",
     "@angular/cli": "^20.3.3",
     "@angular/compiler-cli": "^20.3.0",
+    "@tailwindcss/postcss": "^4.0.0",
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",
+    "cpy-cli": "^5.0.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.0.0",
     "typescript": "~5.9.2"
   }
 }

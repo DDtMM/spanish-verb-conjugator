@@ -1,3 +1,29 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    loadComponent: () => import('./components/layout.component').then(m => m.LayoutComponent),
+    children: [
+      {
+        path: '',
+        title: 'Home',
+        loadComponent: () => import('./pages/home.component').then(m => m.HomeComponent)
+      },
+      {
+        path: 'present-tense',
+        title: 'Present Tense',
+        loadComponent: () => import('./pages/present-tense.component').then(m => m.PresentTenseComponent)
+      },
+      {
+        path: 'preterite',
+        title: 'Preterite Tense',
+        loadComponent: () => import('./pages/preterite.component').then(m => m.PreteriteComponent)
+      }
+    ]
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];
