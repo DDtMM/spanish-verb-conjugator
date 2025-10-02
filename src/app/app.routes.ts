@@ -19,6 +19,11 @@ export const routes: Routes = [
         path: 'preterite',
         title: 'Preterite Tense',
         loadComponent: () => import('./pages/preterite.component').then(m => m.PreteriteComponent)
+      },
+      {
+        path: 'sentence-generator',
+        title: 'Sentence Generator',
+        loadComponent: () => import('./pages/sentence-generator.component').then(m => m.SentenceGeneratorComponent)
       }
     ]
   },

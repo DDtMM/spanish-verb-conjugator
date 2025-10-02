@@ -88,7 +88,6 @@ export class VerbTableComponent {
     vosotros: 'vosotros',
     ellosEllasUstedes: 'ell(os|as)/ustedes',
   }
-
   readonly examples = computed(() => 
     Object.entries(this.conjugation())
       .filter(([key, value]) => 

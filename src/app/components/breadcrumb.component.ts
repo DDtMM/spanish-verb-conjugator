@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, effect, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -18,7 +18,7 @@ export interface BreadcrumbItem {
         @for (item of items(); track item.label) {
           <li>
             @if (item.route && !item.active) {
-              <a [routerLink]="item.route" class="link link-primary">{{ item.label }}</a>
+              <a [routerLink]="item.route" class="link">{{ item.label }}</a>
             } @else {
               <span class="text-base-content/70">{{ item.label }}</span>
             }
@@ -30,4 +30,5 @@ export interface BreadcrumbItem {
 })
 export class BreadcrumbComponent {
   items = input.required<BreadcrumbItem[]>();
+  x = effect(() => console.log(this.items()));
 }

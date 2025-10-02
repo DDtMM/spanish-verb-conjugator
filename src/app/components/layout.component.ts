@@ -12,9 +12,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   imports: [RouterOutlet, BreadcrumbComponent],
   template: `
     <div class="max-w-6xl mx-auto p-5">
-      @if (breadcrumbs().length > 1) {
-        <app-breadcrumb [items]="breadcrumbs()"></app-breadcrumb>
-      }
+      <app-breadcrumb [items]="breadcrumbs()"></app-breadcrumb>
       <router-outlet />
     </div>
   `
@@ -33,44 +31,37 @@ export class LayoutComponent {
     const breadcrumbs: BreadcrumbItem[] = [];
     
     // Get the current activated route from the router
-    let route: ActivatedRoute | null = this.router.routerState.root;
+    let route: ActivatedRoute | undefined = this.router.routerState.root.children[0];
     let url = '';
-    
+
     // Traverse the route tree to build breadcrumbs
-    while (route) {
-
-      // Get the first child route (since we have a layout wrapper)
-      if (route.children && route.children.length > 0) {
-        route = route.children[0];
+    while (route && route.snapshot) {
         
-        // Build the URL segment
-        const urlSegment = route.snapshot.url.map((segment: any) => segment.path).join('/');
-        if (urlSegment) {
-          url += '/' + urlSegment;
-        } else if (url === '') {
-          url = '/';
-        }
-        
- 
-        // Get the title from route data
-        const title = route.snapshot.data['title'] || route.snapshot.title;
-
-        if (title) {
-          const isActive = url === event.url;
-          breadcrumbs.push({
-            label: title,
-            route: isActive ? undefined : url,
-            active: isActive
-          });
-        }
-        
-        // Move to next child
-        route = route.children.length > 0 ? route.children[0] : null;
-      } else {
-        route = null;
+      // Build the URL segment
+      const urlSegment = route.snapshot.url.map((segment: any) => segment.path).join('/');
+      if (urlSegment) {
+        url += '/' + urlSegment;
+      } else if (url === '') {
+        url = '/';
       }
-    }
+      
 
+      // Get the title from route data
+      const title = route.snapshot.data['title'] || route.snapshot.title;
+
+      if (title && !breadcrumbs.find(b => b.route === url)) {
+        const isActive = url === event.url;
+        breadcrumbs.push({
+          label: title,
+          route: url,
+          active: isActive
+        });
+      }
+
+      route = route.children[0];
+   
+    }
+    console.log(breadcrumbs)
     return breadcrumbs;
   }
 }
