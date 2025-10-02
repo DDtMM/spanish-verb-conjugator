@@ -20,8 +20,11 @@ import { CONJUGATION_CATEGORIES, ConjugationCategory, Tense, Verb, VerbConjugati
           {{ verb().infinitive }} - {{ verb().definition }}
         </div>
         <div class="badge badge-ghost bg-white/20">
-          @if (verb().isIrregular) {
-            {{ verb().irregularSummary || 'Irregular' }}
+          @if (conjugation().isIrregular) {
+            Irregular
+            @if (conjugation().irregularDescription) {
+              : {{ conjugation().irregularDescription }}
+            }
           } @else {
             Regular
           }
@@ -86,7 +89,16 @@ export class VerbTableComponent {
     ellosEllasUstedes: 'ell(os|as)/ustedes',
   }
 
-  readonly examples = computed(() => Object.values(this.conjugation()).filter(isConjugationWithSampleSentence));
+  readonly examples = computed(() => 
+    Object.entries(this.conjugation())
+      .filter(([key, value]) => 
+        key !== 'irregularDescription' && 
+        key !== 'isIrregular' && 
+        typeof value === 'object' && 
+        isConjugationWithSampleSentence(value)
+      )
+      .map(([key, value]) => value as VerbConjugationWithSample)
+  );
   readonly verb = input.required<Verb>();
   readonly tense = input.required<Tense>();
 

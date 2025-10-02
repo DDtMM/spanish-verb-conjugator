@@ -93,7 +93,7 @@ import { VERBS, Verb } from '../verbs';
     </div>
 
     <!-- Controls Section -->
-    <div class="card bg-secondary text-secondary-content shadow-lg mb-8">
+    <div class="card bg-primary text-primary-content shadow-lg mb-8">
       <div class="card-body">
         <h2 class="card-title text-2xl mb-4">
           Verb Conjugations + Sample Sentences
