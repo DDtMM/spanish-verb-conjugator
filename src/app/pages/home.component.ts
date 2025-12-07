@@ -48,6 +48,20 @@ import { RouterLink } from '@angular/router';
       
       <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
         <div class="card-body text-center">
+          <h2 class="card-title text-2xl justify-center mb-4">Imperfect Tense</h2>
+          <p class="text-base-content/80 leading-relaxed mb-6">
+            Learn the imperfect tense for describing past habits, ongoing actions, and background information.
+          </p>
+          <div class="card-actions justify-center">
+            <a routerLink="/imperfect" class="btn btn-primary btn-lg">
+              Study Imperfect Tense
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="card-body text-center">
           <h2 class="card-title text-2xl justify-center mb-4">Sentence Generator</h2>
           <p class="text-base-content/80 leading-relaxed mb-6">
             Practice building sentences with direct object pronouns using interactive dropdowns.
