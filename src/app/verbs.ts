@@ -394,7 +394,7 @@ export const VERBS: Verb[] = [
       isIrregular: true,
       yo: { conjugated: 'iba', sampleSentence: 'Yo iba siempre solo.', sampleTranslation: 'I used to go alone.' },
       tu: { conjugated: 'ibas', sampleSentence: 'Tú ibas al cine mucho.', sampleTranslation: 'You used to go to the movies a lot.' },
-      elEllaUsted: { conjugated: 'iba', sampleSentence: 'Usted ya no iba a nadie.', sampleTranslation: 'You no longer used to go to anyone.' },
+      elEllaUsted: { conjugated: 'iba', sampleSentence: 'Usted ya no iba a ninguna parte.', sampleTranslation: 'You no longer used to go anywhere.' },
       nosotros: { conjugated: 'íbamos', sampleSentence: 'Nosotros íbamos al parque.', sampleTranslation: 'We used to go to the park.' },
       vosotros: { conjugated: 'ibais', sampleSentence: 'Vosotros ibais a la playa.', sampleTranslation: 'You all used to go to the beach.' },
       ellosEllasUstedes: { conjugated: 'iban', sampleSentence: 'Ustedes iban también juntos.', sampleTranslation: 'You all also used to go together.' }
@@ -491,7 +491,7 @@ export const VERBS: Verb[] = [
     imperfect: {
       yo: { conjugated: 'prefería', sampleSentence: 'Yo prefería siempre el té.', sampleTranslation: 'I used to prefer tea.' },
       tu: { conjugated: 'preferías', sampleSentence: 'Tú preferías el chocolate.', sampleTranslation: 'You used to prefer chocolate.' },
-      elEllaUsted: { conjugated: 'prefería', sampleSentence: 'Usted ya no prefería a nadie.', sampleTranslation: 'You no longer used to prefer anyone.' },
+      elEllaUsted: { conjugated: 'prefería', sampleSentence: 'Usted ya no prefería nada especial.', sampleTranslation: 'You no longer used to prefer anything special.' },
       nosotros: { conjugated: 'preferíamos', sampleSentence: 'Nosotros preferíamos la música.', sampleTranslation: 'We used to prefer music.' },
       vosotros: { conjugated: 'preferíais', sampleSentence: 'Vosotros preferíais los deportes.', sampleTranslation: 'You all used to prefer sports.' },
       ellosEllasUstedes: { conjugated: 'preferían', sampleSentence: 'Ustedes preferían también café.', sampleTranslation: 'You all also used to prefer coffee.' }
