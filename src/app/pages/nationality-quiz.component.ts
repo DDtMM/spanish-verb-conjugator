@@ -323,13 +323,13 @@ export class NationalityQuizComponent {
   }
 
   submitAnswer() {
-    const answer = this.currentAnswer().trim().toLowerCase();
+    const answer = this.currentAnswer().trim().toLowerCase().normalize('NFD');
     if (!answer) return;
 
     const currentQ = this.currentQuestion();
     if (!currentQ || currentQ.isCorrect !== null) return;
 
-    const correctAnswer = currentQ.correctAnswer.toLowerCase();
+    const correctAnswer = currentQ.correctAnswer.toLowerCase().normalize('NFD');
     const isCorrect = answer === correctAnswer;
 
     // Update the question in the array

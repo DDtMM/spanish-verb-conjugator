@@ -40,7 +40,7 @@ export const NATIONALITIES: Nationality[] = [
     country: 'Argentina',
     masculine: 'argentino',
     feminine: 'argentina',
-    englishTranslation: 'Argentine/Argentinian'
+    englishTranslation: 'Argentine'
   },
   {
     country: 'Brazil',
