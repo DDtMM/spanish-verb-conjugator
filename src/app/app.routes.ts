@@ -21,6 +21,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/preterite.component').then(m => m.PreteriteComponent)
       },
       {
+        path: 'imperfect',
+        title: 'Imperfect Tense',
+        loadComponent: () => import('./pages/imperfect.component').then(m => m.ImperfectComponent)
+      },
+      {
         path: 'sentence-generator',
         title: 'Sentence Generator',
         loadComponent: () => import('./pages/sentence-generator.component').then(m => m.SentenceGeneratorComponent)
