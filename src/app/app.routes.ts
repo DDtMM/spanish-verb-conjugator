@@ -24,6 +24,11 @@ export const routes: Routes = [
         path: 'sentence-generator',
         title: 'Sentence Generator',
         loadComponent: () => import('./pages/sentence-generator.component').then(m => m.SentenceGeneratorComponent)
+      },
+      {
+        path: 'nationality-quiz',
+        title: 'Nationality Quiz',
+        loadComponent: () => import('./pages/nationality-quiz.component').then(m => m.NationalityQuizComponent)
       }
     ]
   },
