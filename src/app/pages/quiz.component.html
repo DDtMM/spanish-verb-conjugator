@@ -1,10 +1,10 @@
-<div class="min-h-screen bg-base-200 py-8 px-4">
+<div class="min-h-screen bg-base-200 py-2 px-4">
   <div class="max-w-3xl mx-auto">
     @if (!quizComplete()) {
       <!-- Quiz Progress -->
-      <div class="mb-6">
+      <div class="mb-4">
         <div class="flex justify-between items-center mb-2">
-          <h1 class="text-2xl font-bold text-base-content">Spanish Quiz</h1>
+          <h1 class="text-xl font-bold text-base-content">Spanish Quiz</h1>
           <span class="text-base-content opacity-70">
             Question {{ currentQuestionIndex() + 1 }} of {{ totalQuestions() }}
           </span>
@@ -19,8 +19,8 @@
 
       <!-- Question Card -->
       @if (currentQuestion(); as question) {
-        <div class="bg-base-100 rounded-lg shadow-lg p-8">
-          <h2 class="text-xl font-semibold text-base-content mb-6">
+        <div class="bg-base-100 rounded-lg shadow-lg p-4">
+          <h2 class="text-xl font-semibold text-base-content mb-4">
             {{ question.question }}
           </h2>
 
@@ -54,7 +54,7 @@
 
           <!-- Result Message -->
           @if (showingResult()) {
-            <div class="mt-6 p-4 rounded-lg" [class]="isCorrect() ? 'bg-success/10' : 'bg-error/10'">
+            <div class="mt-4 p-3 rounded-lg" [class]="isCorrect() ? 'bg-success/10' : 'bg-error/10'">
               @if (isCorrect()) {
                 <p class="text-success font-semibold">Correct! 🎉</p>
               } @else {
@@ -71,7 +71,7 @@
             <!-- Next Button -->
             <button
               (click)="nextQuestion()"
-              class="mt-6 w-full btn btn-primary py-3 px-6 rounded-lg font-semibold">
+              class="mt-4 w-full btn btn-primary py-3 px-6 rounded-lg font-semibold">
               {{ currentQuestionIndex() < totalQuestions() - 1 ? 'Next Question' : 'Finish Quiz' }}
             </button>
           }
@@ -80,7 +80,7 @@
     } @else {
       <!-- Quiz Complete -->
       <div class="bg-base-100 rounded-lg shadow-lg p-8">
-        <h1 class="text-3xl font-bold text-base-content mb-4">
+        <h1 class="text-2xl font-bold text-base-content mb-4">
           @if (retryMode()) {
             Retry Complete!
           } @else {
