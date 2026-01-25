@@ -18,6 +18,20 @@ import { RouterLink } from '@angular/router';
     
     <!-- Navigation Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="card-body text-center">
+          <h2 class="card-title text-2xl justify-center mb-4">Chapter 5 - Lesson A: Preterite vs Imperfect</h2>
+          <p class="text-base-content/80 leading-relaxed mb-6">
+            Practice distinguishing between preterite and imperfect tenses with a focused quiz.
+          </p>
+          <div class="card-actions justify-center">
+            <a routerLink="/quiz" [queryParams]="{words: 'aprender,pagar,mirar,decidir,salir,tomar,escribir,comprar,invitar,encontrar,buscar,ir,hablar,acostarse,comer', tense: 'preterite,imperfect', numberOfQuestions: '20'}" class="btn btn-accent btn-lg">
+              Start Chapter 5 Quiz
+            </a>
+          </div>
+        </div>
+      </div>
+      
       <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
         <div class="card-body text-center">
           <h2 class="card-title text-2xl justify-center mb-4">Present Tense</h2>

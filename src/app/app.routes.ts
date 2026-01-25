@@ -34,6 +34,11 @@ export const routes: Routes = [
         path: 'nationality-quiz',
         title: 'Nationality Quiz',
         loadComponent: () => import('./pages/nationality-quiz.component').then(m => m.NationalityQuizComponent)
+      },
+      {
+        path: 'quiz',
+        title: 'Quiz',
+        loadComponent: () => import('./pages/quiz.component').then(m => m.QuizComponent)
       }
     ]
   },

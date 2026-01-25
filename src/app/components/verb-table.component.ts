@@ -1,6 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CONJUGATION_CATEGORIES, ConjugationCategory, Tense, Verb, VerbConjugation, VerbConjugationWithSample } from '../verbs';
+import { CONJUGATION_CATEGORIES, ConjugationCategory, Tense, Verb, VerbConjugationWithSample } from '../verbs';
 
 @Component({
   selector: 'app-verb-table',
@@ -103,6 +103,6 @@ export class VerbTableComponent {
 
 }
 
-function isConjugationWithSampleSentence(conjugation: VerbConjugation | VerbConjugationWithSample): conjugation is VerbConjugationWithSample {
+function isConjugationWithSampleSentence(conjugation: VerbConjugationWithSample): conjugation is VerbConjugationWithSample {
   return (conjugation as VerbConjugationWithSample).sampleSentence !== undefined;
 }
