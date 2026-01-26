@@ -7,8 +7,8 @@ import {
   SIMPLE_VERBS,
   SubjectPronoun,
   ObjectPronoun 
-} from '../pronouns';
-import { VERBS, ConjugationCategory, Verb } from '../verbs';
+} from '../words/pronouns';
+import { VERBS, ConjugationCategory, Verb } from '../words/verbs';
 
 interface GeneratedSentence {
   spanish: string;

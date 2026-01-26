@@ -1,6 +1,6 @@
 import { Component, computed, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CONJUGATION_CATEGORIES, ConjugationCategory, Tense, Verb, VerbConjugationWithSample } from '../verbs';
+import { CONJUGATION_CATEGORIES, ConjugationCategory, Tense, Verb, VerbConjugationWithSample } from '../words/verbs';
 
 @Component({
   selector: 'app-verb-table',

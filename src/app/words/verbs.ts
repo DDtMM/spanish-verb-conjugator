@@ -9,6 +9,25 @@ export const CONJUGATION_CATEGORIES = ['yo', 'tu', 'elEllaUsted', 'nosotros', 'v
 
 export type ConjugationCategory = (typeof CONJUGATION_CATEGORIES)[number];
 
+export const CONJUGATION_CATEGORIES_SPANISH_LABELS: Record<ConjugationCategory, string> = {
+  yo: 'yo',
+  tu: 'tu',
+  elEllaUsted: 'el/ella/usted',
+  nosotros: 'nosotros',
+  vosotros: 'vosotros',
+  ellosEllasUstedes: 'ellos/ellas/ustedes',
+}
+
+export const CONJUGATION_CATEGORIES_ENGLISH_LABELS: Record<ConjugationCategory, string> = {
+  yo: 'I',
+  tu: 'you',
+  elEllaUsted: 'he/she/you (formal)',
+  nosotros: 'we',
+  vosotros: 'you all',
+  ellosEllasUstedes: 'they/you all (formal)',
+}
+
+
 export const TENSES = ['present', 'preterite', 'imperfect'] as const;
 
 export type Tense = (typeof TENSES)[number];

@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VerbTableComponent } from '../components/verb-table.component';
-import { VERBS, Verb } from '../verbs';
+import { VERBS, Verb } from '../words/verbs';
 
 @Component({
   selector: 'app-preterite',
