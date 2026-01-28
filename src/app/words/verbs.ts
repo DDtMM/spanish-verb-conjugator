@@ -43,6 +43,8 @@ export type VerbBase = {
   infinitive: string;
   definition: string;
   isImportant: boolean;
+  /** Optional tags to identify the verbs. */
+  tags?: string[];
 };
 
 export type Verb = VerbBase & {

@@ -16,9 +16,22 @@ function generateSpanishVerbQuestion(
 
   const correctAnswer = conjugatedForm;
 
+  // Filter other verbs by matching tags if the verb has tags
+  let candidateVerbs = VERBS.filter(v => v.infinitive !== verb.infinitive);
+  
+  if (verb.tags && verb.tags.length > 0) {
+    const matchingTagVerbs = candidateVerbs.filter(v => 
+      v.tags && v.tags.some(tag => verb.tags!.includes(tag))
+    );
+    
+    // Use matching tag verbs if we have enough, otherwise fall back to all verbs
+    if (matchingTagVerbs.length >= 3) {
+      candidateVerbs = matchingTagVerbs;
+    }
+  }
+
   // Get 3 other verbs for decoys
-  const otherVerbs = VERBS
-    .filter(v => v.infinitive !== verb.infinitive)
+  const otherVerbs = candidateVerbs
     .sort(() => Math.random() - 0.5)
     .slice(0, 3);
 
@@ -79,9 +92,22 @@ function generateEnglishVerbQuestion(
 
   const correctAnswer = englishTranslation;
 
+  // Filter other verbs by matching tags if the verb has tags
+  let candidateVerbs = VERBS.filter(v => v.infinitive !== verb.infinitive);
+  
+  if (verb.tags && verb.tags.length > 0) {
+    const matchingTagVerbs = candidateVerbs.filter(v => 
+      v.tags && v.tags.some(tag => verb.tags!.includes(tag))
+    );
+    
+    // Use matching tag verbs if we have enough, otherwise fall back to all verbs
+    if (matchingTagVerbs.length >= 3) {
+      candidateVerbs = matchingTagVerbs;
+    }
+  }
+
   // Get 3 other verbs for decoys
-  const otherVerbs = VERBS
-    .filter(v => v.infinitive !== verb.infinitive)
+  const otherVerbs = candidateVerbs
     .sort(() => Math.random() - 0.5)
     .slice(0, 3);
 

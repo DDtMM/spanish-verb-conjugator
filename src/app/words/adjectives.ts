@@ -7,6 +7,8 @@ export interface Adjective {
   femininePlural: string;
   sampleSentence: string;
   sampleTranslation: string;
+  /** Optional tags to identify the words. */
+  tags?: string[];
 }
 
 export const ADJECTIVES: Adjective[] = [

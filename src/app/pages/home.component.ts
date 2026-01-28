@@ -16,144 +16,167 @@ import { RouterLink } from '@angular/router';
       </p>
     </div>
     
-    <!-- Navigation Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Chapter 5 - Lesson A: Preterite vs Imperfect</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Practice distinguishing between preterite and imperfect tenses with a focused quiz.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/quiz" [queryParams]="{words: 'aprender,pagar,mirar,decidir,salir,tomar,escribir,comprar,invitar,encontrar,buscar,ir,hablar,acostarse,comer', tense: 'preterite,imperfect', numberOfQuestions: '20'}" class="btn btn-accent btn-lg">
-              Start Chapter 5 Quiz
-            </a>
+    <!-- Tutorials Section -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-base-content mb-6">Tutorials</h2>
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Present Tense</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Learn how to conjugate verbs in the present tense.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/present-tense" class="btn btn-primary btn-sm">
+                Study
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Preterite Tense</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Master the preterite tense for completed actions in the past.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/preterite" class="btn btn-primary btn-sm">
+                Study
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Imperfect Tense</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Learn the imperfect tense for past habits and ongoing actions.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/imperfect" class="btn btn-primary btn-sm">
+                Study
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Sentence Generator</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Practice building sentences with direct object pronouns.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/sentence-generator" class="btn btn-primary btn-sm">
+                Build
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Spanish Numbers</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Learn Spanish numbers from 0 to 10,000 with patterns.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/numbers" class="btn btn-primary btn-sm">
+                Learn
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Parts of the Face</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Study vocabulary for parts of the face and head.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/parts-of-face" class="btn btn-primary btn-sm">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Dates & Days Explained</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Learn days of the week, months, and how to write dates.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/dates-days-explained" class="btn btn-primary btn-sm">
+                Learn
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Present Tense</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Learn how to conjugate verbs in the present tense. Perfect for describing current actions, habits, and general truths.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/present-tense" class="btn btn-primary btn-lg">
-              Study Present Tense
-            </a>
+    </div>
+    
+    <!-- Quizzes Section -->
+    <div class="mb-10">
+      <h2 class="text-3xl font-bold text-base-content mb-6">Quizzes</h2>
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Chapter 5 Quiz</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Practice distinguishing between preterite and imperfect tenses.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/quiz" [queryParams]="{words: 'aprender,pagar,mirar,decidir,salir,tomar,escribir,comprar,invitar,encontrar,buscar,ir,hablar,acostarse,comer', tense: 'preterite,imperfect', numberOfQuestions: '20'}" class="btn btn-accent btn-sm">
+                Start
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Preterite Tense</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Master the preterite tense for talking about completed actions in the past.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/preterite" class="btn btn-primary btn-lg">
-              Study Preterite Tense
-            </a>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Nationality Quiz</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Test your knowledge of nationality adjectives in Spanish.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/nationality-quiz" class="btn btn-accent btn-sm">
+                Take Quiz
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Imperfect Tense</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Learn the imperfect tense for describing past habits, ongoing actions, and background information.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/imperfect" class="btn btn-primary btn-lg">
-              Study Imperfect Tense
-            </a>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Dates and Days Quiz</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Test your knowledge of days of the week and months.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/time-quiz" class="btn btn-accent btn-sm">
+                Start
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Sentence Generator</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Practice building sentences with direct object pronouns using interactive dropdowns.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/sentence-generator" class="btn btn-primary btn-lg">
-              Build Sentences
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Nationality Quiz</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Test your knowledge of nationality adjectives in Spanish with both masculine and feminine forms.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/nationality-quiz" class="btn btn-primary btn-lg">
-              Take Quiz
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Spanish Numbers</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Learn Spanish numbers from 0 to 10,000 with helpful patterns, tips, and interactive quizzes.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/numbers" class="btn btn-primary btn-lg">
-              Learn Numbers
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Selected Nouns</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Study days of the week, months, and parts of the head in Spanish with examples.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/selected-nouns" class="btn btn-primary btn-lg">
-              View Nouns
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Time Quiz</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Test your knowledge of days of the week and months in Spanish.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/time-quiz" class="btn btn-primary btn-lg">
-              Start Quiz
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
-        <div class="card-body text-center">
-          <h2 class="card-title text-2xl justify-center mb-4">Head Parts Quiz</h2>
-          <p class="text-base-content/80 leading-relaxed mb-6">
-            Practice vocabulary for parts of the head in Spanish with this interactive quiz.
-          </p>
-          <div class="card-actions justify-center">
-            <a routerLink="/head-parts-quiz" class="btn btn-primary btn-lg">
-              Start Quiz
-            </a>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Head Parts Quiz</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Practice vocabulary for parts of the head in Spanish.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/head-parts-quiz" class="btn btn-accent btn-sm">
+                Start
+              </a>
+            </div>
           </div>
         </div>
       </div>

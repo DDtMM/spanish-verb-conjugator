@@ -37,7 +37,7 @@ export class HeadPartsQuizComponent {
 
   generateQuestions(): void {
     // Get all parts of the head
-    const headPartNouns = NOUNS.filter(n => n.keywords?.includes('head-part'));
+    const headPartNouns = NOUNS.filter(n => n.tags?.includes('head-part'));
     
     const questions: UiQuestion[] = [];
     let questionId = 0;

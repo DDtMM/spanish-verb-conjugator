@@ -38,7 +38,7 @@ export class TimeQuizComponent {
   generateQuestions(): void {
     // Get all days of the week and months
     const timeNouns = NOUNS.filter(n => 
-      n.keywords?.includes('day-of-week') || n.keywords?.includes('month')
+      n.tags?.includes('day-of-week') || n.tags?.includes('month')
     );
     
     const questions: UiQuestion[] = [];

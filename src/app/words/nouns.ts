@@ -2,9 +2,12 @@ export interface Noun {
   word: string;
   definition: string;
   gender: 'masculine' | 'feminine';
+  /** The origin of the word. (In English) */
+  origin?: string;
   sampleSentence: string;
   sampleTranslation: string;
-  keywords?: string[];
+  /** Optional tags to identify the words. */
+  tags?: string[];
 }
 
 export const NOUNS: Noun[] = [
@@ -433,154 +436,173 @@ export const NOUNS: Noun[] = [
     word: 'lunes',
     definition: 'Monday',
     gender: 'masculine',
+    origin: 'From Latin "dies lunae" (day of the Moon).  Think of Mr.s Lunes from Morty\'s Mind Blowers.',
     sampleSentence: 'El lunes tengo una reunión.',
     sampleTranslation: 'On Monday I have a meeting.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   {
     word: 'martes',
     definition: 'Tuesday',
     gender: 'masculine',
+    origin: 'From Latin "dies Martis" (day of Mars, Roman god of war)',
     sampleSentence: 'El martes voy al gimnasio.',
     sampleTranslation: 'On Tuesday I go to the gym.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   {
     word: 'miércoles',
     definition: 'Wednesday',
     gender: 'masculine',
+    origin: 'From Latin "dies Mercurii" (day of Mercury, Roman god of commerce)',
     sampleSentence: 'El miércoles es mi día favorito.',
     sampleTranslation: 'Wednesday is my favorite day.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   {
     word: 'jueves',
     definition: 'Thursday',
     gender: 'masculine',
+    origin: 'From Latin "dies Iovis" (day of Jupiter, king of the Roman gods)',
     sampleSentence: 'El jueves vamos al cine.',
     sampleTranslation: 'On Thursday we go to the movies.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   {
     word: 'viernes',
     definition: 'Friday',
     gender: 'masculine',
+    origin: 'From Latin "dies Veneris" (day of Venus, Roman goddess of love)',
     sampleSentence: 'El viernes salgo con amigos.',
     sampleTranslation: 'On Friday I go out with friends.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   {
     word: 'sábado',
     definition: 'Saturday',
     gender: 'masculine',
+    origin: 'From Hebrew "shabbat" (Sabbath) via Latin "sabbatum"',
     sampleSentence: 'El sábado voy de compras.',
     sampleTranslation: 'On Saturday I go shopping.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   {
     word: 'domingo',
     definition: 'Sunday',
     gender: 'masculine',
+    origin: 'From Latin "dies Dominicus" (day of the Lord)',
     sampleSentence: 'El domingo descansamos.',
     sampleTranslation: 'On Sunday we rest.',
-    keywords: ['day-of-week']
+    tags: ['day-of-week']
   },
   // Months
   {
     word: 'enero',
     definition: 'January',
     gender: 'masculine',
+    origin: 'From Latin "Ianuarius", named after Janus, Roman god of beginnings and transitions',
     sampleSentence: 'Enero es el primer mes del año.',
     sampleTranslation: 'January is the first month of the year.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'febrero',
     definition: 'February',
     gender: 'masculine',
+    origin: 'From Latin "Februarius", named after Februa, a Roman purification festival',
     sampleSentence: 'Febrero tiene 28 días.',
     sampleTranslation: 'February has 28 days.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'marzo',
     definition: 'March',
     gender: 'masculine',
+    origin: 'From Latin "Martius", named after Mars, Roman god of war',
     sampleSentence: 'Marzo es el mes de la primavera.',
     sampleTranslation: 'March is the month of spring.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'abril',
     definition: 'April',
     gender: 'masculine',
+    origin: 'From Latin "Aprilis", possibly from "aperire" (to open), referring to opening buds',
     sampleSentence: 'En abril llueve mucho.',
     sampleTranslation: 'In April it rains a lot.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'mayo',
     definition: 'May',
     gender: 'masculine',
+    origin: 'From Latin "Maius", named after Maia, Roman goddess of spring and growth',
     sampleSentence: 'Mayo es un mes muy bonito.',
     sampleTranslation: 'May is a very beautiful month.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'junio',
     definition: 'June',
     gender: 'masculine',
+    origin: 'From Latin "Iunius", named after Juno, Roman goddess of marriage and queen of the gods',
     sampleSentence: 'En junio empieza el verano.',
     sampleTranslation: 'In June summer begins.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'julio',
     definition: 'July',
     gender: 'masculine',
+    origin: 'From Latin "Iulius", named after Julius Caesar',
     sampleSentence: 'Julio es un mes muy caluroso.',
     sampleTranslation: 'July is a very hot month.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'agosto',
     definition: 'August',
     gender: 'masculine',
+    origin: 'From Latin "Augustus", named after Emperor Augustus Caesar',
     sampleSentence: 'En agosto voy de vacaciones.',
     sampleTranslation: 'In August I go on vacation.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'septiembre',
     definition: 'September',
     gender: 'masculine',
+    origin: 'From Latin "September" (seventh month in the original Roman calendar)',
     sampleSentence: 'Septiembre es el mes de regreso a la escuela.',
     sampleTranslation: 'September is the month of return to school.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'octubre',
     definition: 'October',
     gender: 'masculine',
+    origin: 'From Latin "October" (eighth month in the original Roman calendar)',
     sampleSentence: 'En octubre celebramos Halloween.',
     sampleTranslation: 'In October we celebrate Halloween.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'noviembre',
     definition: 'November',
     gender: 'masculine',
+    origin: 'From Latin "November" (ninth month in the original Roman calendar)',
     sampleSentence: 'Noviembre es un mes de otoño.',
     sampleTranslation: 'November is an autumn month.',
-    keywords: ['month']
+    tags: ['month']
   },
   {
     word: 'diciembre',
     definition: 'December',
     gender: 'masculine',
+    origin: 'From Latin "December" (tenth month in the original Roman calendar)',
     sampleSentence: 'En diciembre celebramos Navidad.',
     sampleTranslation: 'In December we celebrate Christmas.',
-    keywords: ['month']
+    tags: ['month']
   },
   // Parts of the head
   {
@@ -589,7 +611,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Tiene una cara muy bonita.',
     sampleTranslation: 'She has a very pretty face.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'frente',
@@ -597,7 +619,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Me duele la frente.',
     sampleTranslation: 'My forehead hurts.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'ceja',
@@ -605,7 +627,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Tiene las cejas muy pobladas.',
     sampleTranslation: 'He has very thick eyebrows.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'oreja',
@@ -613,7 +635,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Me duele la oreja izquierda.',
     sampleTranslation: 'My left ear hurts.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'nariz',
@@ -621,7 +643,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Tiene la nariz pequeña.',
     sampleTranslation: 'She has a small nose.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'mejilla',
@@ -629,7 +651,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Las mejillas del bebé son rosadas.',
     sampleTranslation: "The baby's cheeks are pink.",
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'labio',
@@ -637,7 +659,7 @@ export const NOUNS: Noun[] = [
     gender: 'masculine',
     sampleSentence: 'Tiene los labios rojos.',
     sampleTranslation: 'She has red lips.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'diente',
@@ -645,7 +667,7 @@ export const NOUNS: Noun[] = [
     gender: 'masculine',
     sampleSentence: 'Me duele un diente.',
     sampleTranslation: 'One of my teeth hurts.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'lengua',
@@ -653,7 +675,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Me quemé la lengua con el café.',
     sampleTranslation: 'I burned my tongue with coffee.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'barbilla',
@@ -661,7 +683,7 @@ export const NOUNS: Noun[] = [
     gender: 'feminine',
     sampleSentence: 'Tiene un lunar en la barbilla.',
     sampleTranslation: 'He has a mole on his chin.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'pelo',
@@ -669,7 +691,7 @@ export const NOUNS: Noun[] = [
     gender: 'masculine',
     sampleSentence: 'Tiene el pelo largo y negro.',
     sampleTranslation: 'She has long, black hair.',
-    keywords: ['head-part']
+    tags: ['head-part']
   },
   {
     word: 'cuello',
@@ -677,6 +699,6 @@ export const NOUNS: Noun[] = [
     gender: 'masculine',
     sampleSentence: 'Me duele el cuello.',
     sampleTranslation: 'My neck hurts.',
-    keywords: ['head-part']
+    tags: ['head-part']
   }
 ];

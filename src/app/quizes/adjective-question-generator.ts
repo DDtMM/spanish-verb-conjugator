@@ -12,8 +12,21 @@ export function generateAdjectiveQuestion(adjective: Adjective): Question {
   const selectedForm = forms[Math.floor(Math.random() * forms.length)];
   const correctAnswer = selectedForm.value;
 
-  const decoys = ADJECTIVES
-    .filter(a => a.word !== adjective.word)
+  // Filter decoys by matching tags if the adjective has tags
+  let candidateDecoys = ADJECTIVES.filter(a => a.word !== adjective.word);
+  
+  if (adjective.tags && adjective.tags.length > 0) {
+    const matchingTagDecoys = candidateDecoys.filter(a => 
+      a.tags && a.tags.some(tag => adjective.tags!.includes(tag))
+    );
+    
+    // Use matching tag decoys if we have enough, otherwise fall back to all adjectives
+    if (matchingTagDecoys.length >= 3) {
+      candidateDecoys = matchingTagDecoys;
+    }
+  }
+
+  const decoys = candidateDecoys
     .sort(() => Math.random() - 0.5)
     .slice(0, 3);
 

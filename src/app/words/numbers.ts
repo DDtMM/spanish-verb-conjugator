@@ -79,8 +79,7 @@ const COMPOUND_NUMBERS: NumberInfo[] = [
 // Hundreds
 const HUNDREDS: NumberInfo[] = [
   { value: 100, spanish: 'cien', notes: 'Used alone or before thousands/millions' },
-  { value: 101, spanish: 'ciento uno', notes: 'ciento + number (1-99)' },
-  { value: 125, spanish: 'ciento veinticinco', notes: 'ciento + twenty-five' },
+  { value: 125, spanish: 'ciento veinticinco', notes: 'ciento + twenty-five - When adding a number of cien it becomes "ciento"' },
   { value: 200, spanish: 'doscientos' },
   { value: 300, spanish: 'trescientos' },
   { value: 400, spanish: 'cuatrocientos' },
@@ -112,18 +111,6 @@ const THOUSANDS: NumberInfo[] = [
   { value: 10000, spanish: 'diez mil' }
 ];
 
-// Common numbers in everyday use
-const COMMON_NUMBERS: NumberInfo[] = [
-  { value: 12, spanish: 'doce', notes: 'Common in telling time' },
-  { value: 15, spanish: 'quince', notes: 'Quinceañera (15th birthday)' },
-  { value: 24, spanish: 'veinticuatro', notes: '24 hours in a day' },
-  { value: 30, spanish: 'treinta', notes: 'Days in a month' },
-  { value: 50, spanish: 'cincuenta', notes: 'Half a hundred' },
-  { value: 100, spanish: 'cien', notes: 'Common round number' },
-  { value: 365, spanish: 'trescientos sesenta y cinco', notes: 'Days in a year' },
-  { value: 1000, spanish: 'mil', notes: 'A thousand' },
-  { value: 2024, spanish: 'dos mil veinticuatro', notes: 'Current year format' }
-];
 
 export const NUMBER_GROUPS: NumberGroup[] = [
   {
@@ -199,17 +186,6 @@ export const NUMBER_GROUPS: NumberGroup[] = [
       '2000+ = number + mil (dos mil, tres mil, etc.)',
       'Pattern: [thousands] + [hundreds] + [tens] + y + [ones]',
       'mil doesn\'t change for gender'
-    ]
-  },
-  {
-    title: 'Common Numbers',
-    description: 'Frequently used numbers in everyday Spanish',
-    numbers: COMMON_NUMBERS,
-    tips: [
-      'Practice these in context',
-      'Years: dos mil veinticuatro (2024)',
-      'Phone numbers: say digits individually',
-      'Prices: cincuenta euros (50 euros)'
     ]
   }
 ];
