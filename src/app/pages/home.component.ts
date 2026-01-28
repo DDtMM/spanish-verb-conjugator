@@ -115,6 +115,48 @@ import { RouterLink } from '@angular/router';
           </div>
         </div>
       </div>
+      
+      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="card-body text-center">
+          <h2 class="card-title text-2xl justify-center mb-4">Selected Nouns</h2>
+          <p class="text-base-content/80 leading-relaxed mb-6">
+            Study days of the week, months, and parts of the head in Spanish with examples.
+          </p>
+          <div class="card-actions justify-center">
+            <a routerLink="/selected-nouns" class="btn btn-primary btn-lg">
+              View Nouns
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="card-body text-center">
+          <h2 class="card-title text-2xl justify-center mb-4">Time Quiz</h2>
+          <p class="text-base-content/80 leading-relaxed mb-6">
+            Test your knowledge of days of the week and months in Spanish.
+          </p>
+          <div class="card-actions justify-center">
+            <a routerLink="/time-quiz" class="btn btn-primary btn-lg">
+              Start Quiz
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="card-body text-center">
+          <h2 class="card-title text-2xl justify-center mb-4">Head Parts Quiz</h2>
+          <p class="text-base-content/80 leading-relaxed mb-6">
+            Practice vocabulary for parts of the head in Spanish with this interactive quiz.
+          </p>
+          <div class="card-actions justify-center">
+            <a routerLink="/head-parts-quiz" class="btn btn-primary btn-lg">
+              Start Quiz
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     
     <!-- Features Section -->
@@ -153,6 +195,14 @@ import { RouterLink } from '@angular/router';
           <div class="flex items-center gap-3 text-lg">
             <span class="text-success font-bold">✓</span>
             Numbers 0-10,000 with patterns
+          </div>
+          <div class="flex items-center gap-3 text-lg">
+            <span class="text-success font-bold">✓</span>
+            Days of the week and months
+          </div>
+          <div class="flex items-center gap-3 text-lg">
+            <span class="text-success font-bold">✓</span>
+            Parts of the head vocabulary
           </div>
         </div>
       </div>

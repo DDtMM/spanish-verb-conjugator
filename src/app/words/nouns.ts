@@ -4,6 +4,7 @@ export interface Noun {
   gender: 'masculine' | 'feminine';
   sampleSentence: string;
   sampleTranslation: string;
+  keywords?: string[];
 }
 
 export const NOUNS: Noun[] = [
@@ -426,5 +427,256 @@ export const NOUNS: Noun[] = [
     gender: 'masculine',
     sampleSentence: 'Hace mucho viento hoy.',
     sampleTranslation: "It's very windy today."
+  },
+  // Days of the week
+  {
+    word: 'lunes',
+    definition: 'Monday',
+    gender: 'masculine',
+    sampleSentence: 'El lunes tengo una reunión.',
+    sampleTranslation: 'On Monday I have a meeting.',
+    keywords: ['day-of-week']
+  },
+  {
+    word: 'martes',
+    definition: 'Tuesday',
+    gender: 'masculine',
+    sampleSentence: 'El martes voy al gimnasio.',
+    sampleTranslation: 'On Tuesday I go to the gym.',
+    keywords: ['day-of-week']
+  },
+  {
+    word: 'miércoles',
+    definition: 'Wednesday',
+    gender: 'masculine',
+    sampleSentence: 'El miércoles es mi día favorito.',
+    sampleTranslation: 'Wednesday is my favorite day.',
+    keywords: ['day-of-week']
+  },
+  {
+    word: 'jueves',
+    definition: 'Thursday',
+    gender: 'masculine',
+    sampleSentence: 'El jueves vamos al cine.',
+    sampleTranslation: 'On Thursday we go to the movies.',
+    keywords: ['day-of-week']
+  },
+  {
+    word: 'viernes',
+    definition: 'Friday',
+    gender: 'masculine',
+    sampleSentence: 'El viernes salgo con amigos.',
+    sampleTranslation: 'On Friday I go out with friends.',
+    keywords: ['day-of-week']
+  },
+  {
+    word: 'sábado',
+    definition: 'Saturday',
+    gender: 'masculine',
+    sampleSentence: 'El sábado voy de compras.',
+    sampleTranslation: 'On Saturday I go shopping.',
+    keywords: ['day-of-week']
+  },
+  {
+    word: 'domingo',
+    definition: 'Sunday',
+    gender: 'masculine',
+    sampleSentence: 'El domingo descansamos.',
+    sampleTranslation: 'On Sunday we rest.',
+    keywords: ['day-of-week']
+  },
+  // Months
+  {
+    word: 'enero',
+    definition: 'January',
+    gender: 'masculine',
+    sampleSentence: 'Enero es el primer mes del año.',
+    sampleTranslation: 'January is the first month of the year.',
+    keywords: ['month']
+  },
+  {
+    word: 'febrero',
+    definition: 'February',
+    gender: 'masculine',
+    sampleSentence: 'Febrero tiene 28 días.',
+    sampleTranslation: 'February has 28 days.',
+    keywords: ['month']
+  },
+  {
+    word: 'marzo',
+    definition: 'March',
+    gender: 'masculine',
+    sampleSentence: 'Marzo es el mes de la primavera.',
+    sampleTranslation: 'March is the month of spring.',
+    keywords: ['month']
+  },
+  {
+    word: 'abril',
+    definition: 'April',
+    gender: 'masculine',
+    sampleSentence: 'En abril llueve mucho.',
+    sampleTranslation: 'In April it rains a lot.',
+    keywords: ['month']
+  },
+  {
+    word: 'mayo',
+    definition: 'May',
+    gender: 'masculine',
+    sampleSentence: 'Mayo es un mes muy bonito.',
+    sampleTranslation: 'May is a very beautiful month.',
+    keywords: ['month']
+  },
+  {
+    word: 'junio',
+    definition: 'June',
+    gender: 'masculine',
+    sampleSentence: 'En junio empieza el verano.',
+    sampleTranslation: 'In June summer begins.',
+    keywords: ['month']
+  },
+  {
+    word: 'julio',
+    definition: 'July',
+    gender: 'masculine',
+    sampleSentence: 'Julio es un mes muy caluroso.',
+    sampleTranslation: 'July is a very hot month.',
+    keywords: ['month']
+  },
+  {
+    word: 'agosto',
+    definition: 'August',
+    gender: 'masculine',
+    sampleSentence: 'En agosto voy de vacaciones.',
+    sampleTranslation: 'In August I go on vacation.',
+    keywords: ['month']
+  },
+  {
+    word: 'septiembre',
+    definition: 'September',
+    gender: 'masculine',
+    sampleSentence: 'Septiembre es el mes de regreso a la escuela.',
+    sampleTranslation: 'September is the month of return to school.',
+    keywords: ['month']
+  },
+  {
+    word: 'octubre',
+    definition: 'October',
+    gender: 'masculine',
+    sampleSentence: 'En octubre celebramos Halloween.',
+    sampleTranslation: 'In October we celebrate Halloween.',
+    keywords: ['month']
+  },
+  {
+    word: 'noviembre',
+    definition: 'November',
+    gender: 'masculine',
+    sampleSentence: 'Noviembre es un mes de otoño.',
+    sampleTranslation: 'November is an autumn month.',
+    keywords: ['month']
+  },
+  {
+    word: 'diciembre',
+    definition: 'December',
+    gender: 'masculine',
+    sampleSentence: 'En diciembre celebramos Navidad.',
+    sampleTranslation: 'In December we celebrate Christmas.',
+    keywords: ['month']
+  },
+  // Parts of the head
+  {
+    word: 'cara',
+    definition: 'face',
+    gender: 'feminine',
+    sampleSentence: 'Tiene una cara muy bonita.',
+    sampleTranslation: 'She has a very pretty face.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'frente',
+    definition: 'forehead',
+    gender: 'feminine',
+    sampleSentence: 'Me duele la frente.',
+    sampleTranslation: 'My forehead hurts.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'ceja',
+    definition: 'eyebrow',
+    gender: 'feminine',
+    sampleSentence: 'Tiene las cejas muy pobladas.',
+    sampleTranslation: 'He has very thick eyebrows.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'oreja',
+    definition: 'ear',
+    gender: 'feminine',
+    sampleSentence: 'Me duele la oreja izquierda.',
+    sampleTranslation: 'My left ear hurts.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'nariz',
+    definition: 'nose',
+    gender: 'feminine',
+    sampleSentence: 'Tiene la nariz pequeña.',
+    sampleTranslation: 'She has a small nose.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'mejilla',
+    definition: 'cheek',
+    gender: 'feminine',
+    sampleSentence: 'Las mejillas del bebé son rosadas.',
+    sampleTranslation: "The baby's cheeks are pink.",
+    keywords: ['head-part']
+  },
+  {
+    word: 'labio',
+    definition: 'lip',
+    gender: 'masculine',
+    sampleSentence: 'Tiene los labios rojos.',
+    sampleTranslation: 'She has red lips.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'diente',
+    definition: 'tooth',
+    gender: 'masculine',
+    sampleSentence: 'Me duele un diente.',
+    sampleTranslation: 'One of my teeth hurts.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'lengua',
+    definition: 'tongue',
+    gender: 'feminine',
+    sampleSentence: 'Me quemé la lengua con el café.',
+    sampleTranslation: 'I burned my tongue with coffee.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'barbilla',
+    definition: 'chin',
+    gender: 'feminine',
+    sampleSentence: 'Tiene un lunar en la barbilla.',
+    sampleTranslation: 'He has a mole on his chin.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'pelo',
+    definition: 'hair',
+    gender: 'masculine',
+    sampleSentence: 'Tiene el pelo largo y negro.',
+    sampleTranslation: 'She has long, black hair.',
+    keywords: ['head-part']
+  },
+  {
+    word: 'cuello',
+    definition: 'neck',
+    gender: 'masculine',
+    sampleSentence: 'Me duele el cuello.',
+    sampleTranslation: 'My neck hurts.',
+    keywords: ['head-part']
   }
 ];
