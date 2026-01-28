@@ -44,6 +44,21 @@ export const routes: Routes = [
         path: 'numbers',
         title: 'Numbers',
         loadComponent: () => import('./pages/numbers.component').then(m => m.NumbersComponent)
+      },
+      {
+        path: 'selected-nouns',
+        title: 'Selected Nouns',
+        loadComponent: () => import('./pages/selected-nouns.component').then(m => m.SelectedNounsComponent)
+      },
+      {
+        path: 'time-quiz',
+        title: 'Time Quiz',
+        loadComponent: () => import('./pages/time-quiz.component').then(m => m.TimeQuizComponent)
+      },
+      {
+        path: 'head-parts-quiz',
+        title: 'Head Parts Quiz',
+        loadComponent: () => import('./pages/head-parts-quiz.component').then(m => m.HeadPartsQuizComponent)
       }
     ]
   },
