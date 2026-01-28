@@ -101,6 +101,20 @@ import { RouterLink } from '@angular/router';
           </div>
         </div>
       </div>
+      
+      <div class="card bg-base-100 text-base-content shadow-xl border-2 border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl">
+        <div class="card-body text-center">
+          <h2 class="card-title text-2xl justify-center mb-4">Spanish Numbers</h2>
+          <p class="text-base-content/80 leading-relaxed mb-6">
+            Learn Spanish numbers from 0 to 10,000 with helpful patterns, tips, and interactive quizzes.
+          </p>
+          <div class="card-actions justify-center">
+            <a routerLink="/numbers" class="btn btn-primary btn-lg">
+              Learn Numbers
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     
     <!-- Features Section -->
@@ -135,6 +149,10 @@ import { RouterLink } from '@angular/router';
           <div class="flex items-center gap-3 text-lg">
             <span class="text-success font-bold">✓</span>
             Nationality translation quiz
+          </div>
+          <div class="flex items-center gap-3 text-lg">
+            <span class="text-success font-bold">✓</span>
+            Numbers 0-10,000 with patterns
           </div>
         </div>
       </div>
