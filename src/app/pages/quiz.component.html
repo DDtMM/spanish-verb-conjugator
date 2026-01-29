@@ -1,24 +1,24 @@
 <div class="min-h-screen bg-base-200 py-2 px-4">
   <div class="max-w-3xl mx-auto">
-    @if (!quizComplete()) {
+    @if (!quizService.quizComplete()) {
       <!-- Quiz Progress -->
       <div class="mb-4">
         <div class="flex justify-between items-center mb-2">
           <h1 class="text-xl font-bold text-base-content">Spanish Quiz</h1>
           <span class="text-base-content opacity-70">
-            Question {{ currentQuestionIndex() + 1 }} of {{ totalQuestions() }}
+            Question {{ quizService.currentQuestionIndex() + 1 }} of {{ quizService.totalQuestions() }}
           </span>
         </div>
         <div class="w-full bg-base-300 rounded-full h-2">
           <div 
             class="bg-primary h-2 rounded-full transition-all duration-300"
-            [style.width.%]="((currentQuestionIndex() + 1) / totalQuestions()) * 100">
+            [style.width.%]="((quizService.currentQuestionIndex() + 1) / quizService.totalQuestions()) * 100">
           </div>
         </div>
       </div>
 
       <!-- Question Card -->
-      @if (currentQuestion(); as question) {
+      @if (quizService.currentQuestion(); as question) {
         <div class="bg-base-100 rounded-lg shadow-lg p-4">
           <h2 class="text-xl font-semibold text-base-content mb-4">
             {{ question.question }}
@@ -29,23 +29,23 @@
             @for (option of question.options; track option.value) {
               <button
                 (click)="selectAnswer(option)"
-                [disabled]="showingResult()"
+                [disabled]="quizService.showingResult()"
                 [class]="
                   'w-full px-2 py-1 text-left rounded-lg border-2 transition-all bg-base-300 ' +
-                  (showingResult() && option.value === question.correctAnswer
+                  (quizService.showingResult() && option.value === question.correctAnswer
                     ? 'border-success bg-success/10 text-success'
-                    : showingResult() && option.value === question.userAnswer && !isCorrect()
+                    : quizService.showingResult() && option.value === question.userAnswer && !isCorrect()
                     ? 'border-error bg-error/10 text-error'
-                    : !showingResult() && question.userAnswer === option.value
+                    : !quizService.showingResult() && question.userAnswer === option.value
                     ? 'border-primary bg-primary/10'
                     : 'border-base-300 hover:border-primary hover:bg-primary/5')
                 "
-                [class.cursor-not-allowed]="showingResult()">
+                [class.cursor-not-allowed]="quizService.showingResult()">
                 <span class="font-medium">{{ option.value }}</span>
-                @if (showingResult() && option.value === question.correctAnswer) {
+                @if (quizService.showingResult() && option.value === question.correctAnswer) {
                   <span class="ml-2 text-success">✓</span>
                 }
-                @if (showingResult() && option.value === question.userAnswer && !isCorrect()) {
+                @if (quizService.showingResult() && option.value === question.userAnswer && !isCorrect()) {
                   <span class="ml-2 text-error">✗</span>
                 }
               </button>
@@ -53,7 +53,7 @@
           </div>
 
           <!-- Result Message -->
-          @if (showingResult()) {
+          @if (quizService.showingResult()) {
             <div class="mt-4 p-3 rounded-lg" [class]="isCorrect() ? 'bg-success/10' : 'bg-error/10'">
               @if (isCorrect()) {
                 <p class="text-success font-semibold">Correct! 🎉</p>
@@ -72,7 +72,7 @@
             <button
               (click)="nextQuestion()"
               class="mt-4 w-full btn btn-primary py-3 px-6 rounded-lg font-semibold">
-              {{ currentQuestionIndex() < totalQuestions() - 1 ? 'Next Question' : 'Finish Quiz' }}
+              {{ quizService.currentQuestionIndex() < quizService.totalQuestions() - 1 ? 'Next Question' : 'Finish Quiz' }}
             </button>
           }
         </div>
@@ -81,7 +81,7 @@
       <!-- Quiz Complete -->
       <div class="bg-base-100 rounded-lg shadow-lg p-8">
         <h1 class="text-2xl font-bold text-base-content mb-4">
-          @if (retryMode()) {
+          @if (quizService.retryMode()) {
             Retry Complete!
           } @else {
             Quiz Complete!
@@ -89,26 +89,26 @@
         </h1>
 
         <div class="mb-6">
-          <p class="text-5xl font-bold text-center my-8" [class]="score() === totalQuestions() ? 'text-success' : 'text-primary'">
-            {{ score() }} / {{ totalQuestions() }}
+          <p class="text-5xl font-bold text-center my-8" [class]="quizService.score() === quizService.totalQuestions() ? 'text-success' : 'text-primary'">
+            {{ quizService.score() }} / {{ quizService.totalQuestions() }}
           </p>
           
-          @if (score() === totalQuestions()) {
+          @if (quizService.score() === quizService.totalQuestions()) {
             <p class="text-center text-xl text-success font-semibold">Perfect Score! 🎊</p>
           } @else {
             <p class="text-center text-xl text-base-content">
-              {{ (score() / totalQuestions() * 100).toFixed(0) }}% Correct
+              {{ (quizService.score() / quizService.totalQuestions() * 100).toFixed(0) }}% Correct
             </p>
           }
         </div>
 
         <!-- Action Buttons -->
         <div class="space-y-3">
-          @if (!retryMode() && incorrectQuestions().length > 0) {
+          @if (!quizService.retryMode() && quizService.incorrectQuestions().length > 0) {
             <button
               (click)="retryIncorrect()"
               class="w-full btn btn-warning py-3 px-6 rounded-lg font-semibold">
-              Retry Incorrect Questions ({{ incorrectQuestions().length }})
+              Retry Incorrect Questions ({{ quizService.incorrectQuestions().length }})
             </button>
           }
           

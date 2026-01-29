@@ -92,12 +92,12 @@ import { RouterLink } from '@angular/router';
         
         <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
           <div class="card-body p-4">
-            <h3 class="card-title text-lg justify-center mb-2">Parts of the Face</h3>
+            <h3 class="card-title text-lg justify-center mb-2">Body Parts</h3>
             <p class="text-sm text-base-content/80 mb-3">
-              Study vocabulary for parts of the face and head.
+               You got to know your parts!
             </p>
             <div class="card-actions justify-center">
-              <a routerLink="/parts-of-face" class="btn btn-primary btn-sm">
+              <a routerLink="/body-parts-tutorial" class="btn btn-primary btn-sm">
                 View
               </a>
             </div>
@@ -117,6 +117,20 @@ import { RouterLink } from '@angular/router';
             </div>
           </div>
         </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Colors</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Learn common Spanish colors and how they agree with nouns.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/colors-explained" class="btn btn-primary btn-sm">
+                Learn
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -131,7 +145,7 @@ import { RouterLink } from '@angular/router';
               Practice distinguishing between preterite and imperfect tenses.
             </p>
             <div class="card-actions justify-center">
-              <a routerLink="/quiz" [queryParams]="{words: 'aprender,pagar,mirar,decidir,salir,tomar,escribir,comprar,invitar,encontrar,buscar,ir,hablar,acostarse,comer', tense: 'preterite,imperfect', numberOfQuestions: '20'}" class="btn btn-accent btn-sm">
+              <a routerLink="/chapter5-quiz" class="btn btn-accent btn-sm">
                 Start
               </a>
             </div>
@@ -168,12 +182,26 @@ import { RouterLink } from '@angular/router';
         
         <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
           <div class="card-body p-4">
-            <h3 class="card-title text-lg justify-center mb-2">Head Parts Quiz</h3>
+            <h3 class="card-title text-lg justify-center mb-2">Body Parts Quiz</h3>
             <p class="text-sm text-base-content/80 mb-3">
-              Practice vocabulary for parts of the head in Spanish.
+              Practice vocabulary for body parts in Spanish.
             </p>
             <div class="card-actions justify-center">
-              <a routerLink="/head-parts-quiz" class="btn btn-accent btn-sm">
+              <a routerLink="/body-parts-quiz" class="btn btn-accent btn-sm">
+                Start
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 text-base-content shadow-lg border border-neutral hover:border-accent transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+          <div class="card-body p-4">
+            <h3 class="card-title text-lg justify-center mb-2">Colors Quiz</h3>
+            <p class="text-sm text-base-content/80 mb-3">
+              Test your knowledge of Spanish colors vocabulary.
+            </p>
+            <div class="card-actions justify-center">
+              <a routerLink="/colors-quiz" class="btn btn-accent btn-sm">
                 Start
               </a>
             </div>
@@ -226,6 +254,10 @@ import { RouterLink } from '@angular/router';
           <div class="flex items-center gap-3 text-lg">
             <span class="text-success font-bold">✓</span>
             Parts of the head vocabulary
+          </div>
+          <div class="flex items-center gap-3 text-lg">
+            <span class="text-success font-bold">✓</span>
+            Spanish colors vocabulary
           </div>
         </div>
       </div>

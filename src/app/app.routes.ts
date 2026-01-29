@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { bodyPartsQuizGuard, colorsQuizGuard, timeQuizGuard, chapter5QuizGuard } from './guards/quiz.guards';
 
 export const routes: Routes = [
   {
@@ -41,14 +42,24 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/quiz.component').then(m => m.QuizComponent)
       },
       {
+        path: 'chapter5-quiz',
+        title: 'Chapter 5 Quiz',
+        canActivate: [chapter5QuizGuard],
+        loadComponent: () => import('./pages/quiz.component').then(m => m.QuizComponent)
+      },
+      {
         path: 'numbers',
         title: 'Numbers',
         loadComponent: () => import('./pages/numbers.component').then(m => m.NumbersComponent)
       },
       {
+        path: 'body-parts-tutorial',
+        title: 'Parts of the Body',
+        loadComponent: () => import('./pages/body-parts-tutorial.component').then(m => m.BodyPartsTutorialComponent)
+      },
+      {
         path: 'parts-of-face',
-        title: 'Parts of the Face',
-        loadComponent: () => import('./pages/parts-of-face.component').then(m => m.PartsOfFaceComponent)
+        redirectTo: 'body-parts-tutorial'
       },
       {
         path: 'dates-days-explained',
@@ -58,12 +69,29 @@ export const routes: Routes = [
       {
         path: 'time-quiz',
         title: 'Time Quiz',
-        loadComponent: () => import('./pages/time-quiz.component').then(m => m.TimeQuizComponent)
+        canActivate: [timeQuizGuard],
+        loadComponent: () => import('./pages/quiz.component').then(m => m.QuizComponent)
+      },
+      {
+        path: 'body-parts-quiz',
+        title: 'Body Parts Quiz',
+        canActivate: [bodyPartsQuizGuard],
+        loadComponent: () => import('./pages/quiz.component').then(m => m.QuizComponent)
       },
       {
         path: 'head-parts-quiz',
-        title: 'Head Parts Quiz',
-        loadComponent: () => import('./pages/head-parts-quiz.component').then(m => m.HeadPartsQuizComponent)
+        redirectTo: 'body-parts-quiz'
+      },
+      {
+        path: 'colors-explained',
+        title: 'Colors in Spanish',
+        loadComponent: () => import('./pages/colors-explained.component').then(m => m.ColorsExplainedComponent)
+      },
+      {
+        path: 'colors-quiz',
+        title: 'Colors Quiz',
+        canActivate: [colorsQuizGuard],
+        loadComponent: () => import('./pages/quiz.component').then(m => m.QuizComponent)
       }
     ]
   },

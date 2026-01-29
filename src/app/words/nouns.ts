@@ -72,7 +72,8 @@ export const NOUNS: Noun[] = [
     definition: 'arm',
     gender: 'masculine',
     sampleSentence: 'Me duele el brazo derecho.',
-    sampleTranslation: 'My right arm hurts.'
+    sampleTranslation: 'My right arm hurts.',
+    tags: ['body-part']
   },
   {
     word: 'cabeza',
@@ -261,7 +262,8 @@ export const NOUNS: Noun[] = [
     definition: 'hand',
     gender: 'feminine',
     sampleSentence: 'Levanta la mano si sabes.',
-    sampleTranslation: 'Raise your hand if you know.'
+    sampleTranslation: 'Raise your hand if you know.',
+    tags: ['body-part']
   },
   {
     word: 'mesa',
@@ -380,7 +382,8 @@ export const NOUNS: Noun[] = [
     definition: 'foot',
     gender: 'masculine',
     sampleSentence: 'Me duele el pie izquierdo.',
-    sampleTranslation: 'My left foot hurts.'
+    sampleTranslation: 'My left foot hurts.',
+    tags: ['body-part']
   },
   {
     word: 'puerta',
@@ -699,6 +702,160 @@ export const NOUNS: Noun[] = [
     gender: 'masculine',
     sampleSentence: 'Me duele el cuello.',
     sampleTranslation: 'My neck hurts.',
-    tags: ['head-part']
+    tags: ['head-part', 'body-part']
+  },
+  // Colors
+  {
+    word: 'color',
+    definition: 'color',
+    gender: 'masculine',
+    sampleSentence: '¿Cuál es tu color favorito?',
+    sampleTranslation: 'What is your favorite color?',
+    tags: ['color']
+  },
+  {
+    word: 'rojo',
+    definition: 'red',
+    gender: 'masculine',
+    sampleSentence: 'El coche es rojo.',
+    sampleTranslation: 'The car is red.',
+    tags: ['color']
+  },
+  {
+    word: 'azul',
+    definition: 'blue',
+    gender: 'masculine',
+    sampleSentence: 'El cielo es azul.',
+    sampleTranslation: 'The sky is blue.',
+    tags: ['color']
+  },
+  {
+    word: 'verde',
+    definition: 'green',
+    gender: 'masculine',
+    sampleSentence: 'La hierba es verde.',
+    sampleTranslation: 'The grass is green.',
+    tags: ['color']
+  },
+  {
+    word: 'amarillo',
+    definition: 'yellow',
+    gender: 'masculine',
+    sampleSentence: 'El sol es amarillo.',
+    sampleTranslation: 'The sun is yellow.',
+    tags: ['color']
+  },
+  {
+    word: 'negro',
+    definition: 'black',
+    gender: 'masculine',
+    sampleSentence: 'El gato es negro.',
+    sampleTranslation: 'The cat is black.',
+    tags: ['color']
+  },
+  {
+    word: 'blanco',
+    definition: 'white',
+    gender: 'masculine',
+    sampleSentence: 'La nieve es blanca.',
+    sampleTranslation: 'The snow is white.',
+    tags: ['color']
+  },
+  {
+    word: 'naranja',
+    definition: 'orange',
+    gender: 'masculine',
+    sampleSentence: 'La naranja es naranja.',
+    sampleTranslation: 'The orange is orange.',
+    tags: ['color']
+  },
+  {
+    word: 'morado',
+    definition: 'purple',
+    gender: 'masculine',
+    sampleSentence: 'La flor es morada.',
+    sampleTranslation: 'The flower is purple.',
+    tags: ['color']
+  },
+  {
+    word: 'rosa',
+    definition: 'pink',
+    gender: 'masculine',
+    sampleSentence: 'Su vestido es rosa.',
+    sampleTranslation: 'Her dress is pink.',
+    tags: ['color']
+  },
+  {
+    word: 'marrón',
+    definition: 'brown',
+    gender: 'masculine',
+    sampleSentence: 'El perro es marrón.',
+    sampleTranslation: 'The dog is brown.',
+    tags: ['color']
+  },
+  {
+    word: 'gris',
+    definition: 'gray',
+    gender: 'masculine',
+    sampleSentence: 'Las nubes son grises.',
+    sampleTranslation: 'The clouds are gray.',
+    tags: ['color']
+  },
+  // Body parts
+  {
+    word: 'hombro',
+    definition: 'shoulder',
+    gender: 'masculine',
+    sampleSentence: 'Me duele el hombro derecho.',
+    sampleTranslation: 'My right shoulder hurts.',
+    tags: ['body-part']
+  },
+  {
+    word: 'estómago',
+    definition: 'stomach',
+    gender: 'masculine',
+    sampleSentence: 'Me duele el estómago.',
+    sampleTranslation: 'My stomach hurts.',
+    tags: ['body-part']
+  },
+  {
+    word: 'pierna',
+    definition: 'leg',
+    gender: 'feminine',
+    sampleSentence: 'Me duele la pierna izquierda.',
+    sampleTranslation: 'My left leg hurts.',
+    tags: ['body-part']
+  },
+  {
+    word: 'rodilla',
+    definition: 'knee',
+    gender: 'feminine',
+    sampleSentence: 'Me lastimé la rodilla jugando fútbol.',
+    sampleTranslation: 'I hurt my knee playing soccer.',
+    tags: ['body-part']
+  },
+  {
+    word: 'dedo',
+    definition: 'finger/toe',
+    gender: 'masculine',
+    sampleSentence: 'Me corté el dedo con un cuchillo.',
+    sampleTranslation: 'I cut my finger with a knife.',
+    tags: ['body-part']
+  },
+  {
+    word: 'espalda',
+    definition: 'back',
+    gender: 'feminine',
+    sampleSentence: 'Me duele la espalda.',
+    sampleTranslation: 'My back hurts.',
+    tags: ['body-part']
+  },
+  {
+    word: 'pecho',
+    definition: 'chest',
+    gender: 'masculine',
+    sampleSentence: 'Respira profundo y expande el pecho.',
+    sampleTranslation: 'Breathe deeply and expand your chest.',
+    tags: ['body-part']
   }
 ];
